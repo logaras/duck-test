@@ -10,6 +10,7 @@
       padding: 0;
       width: 100%;
       height: 100%;
+      overflow: hidden;
     }
     model-viewer {
       width: 100%;
@@ -17,7 +18,7 @@
       display: block;
     }
     #ar-button {
-      position: absolute;
+      position: fixed;
       bottom: 24px;
       left: 50%;
       transform: translateX(-50%);
@@ -29,7 +30,7 @@
       font-size: 16px;
       font-weight: 600;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      z-index: 10;
+      z-index: 999;
     }
   </style>
 </head>
@@ -41,8 +42,3 @@
     camera-controls
     alt="A 3D model">
     <button slot="ar-button" id="ar-button">
-      View in your space
-    </button>
-  </model-viewer>
-</body>
-</html>
